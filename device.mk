@@ -75,7 +75,7 @@ PRODUCT_COPY_FILES += \
 
 # PowerShare
 PRODUCT_PACKAGES += \
-    vendor.lineage.powershare@1.0-service.default
+    vendor.lineage.powershare-service.default
 
 # SecureElement
 PRODUCT_PACKAGES += \
