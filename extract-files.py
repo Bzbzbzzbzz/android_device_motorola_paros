@@ -20,7 +20,7 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'vendor/motorola/sm8475-common',
+    'vendor/motorola/sm6475-common',
     'hardware/motorola',
     'hardware/qcom-caf/sm8450',
     'vendor/qcom/opensource/commonsys-intf/display',
@@ -38,7 +38,7 @@ extract_fns: extract_fns_user_type = {
 }
 
 module = ExtractUtilsModule(
-    'eqs',
+    'paros',
     'motorola',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,

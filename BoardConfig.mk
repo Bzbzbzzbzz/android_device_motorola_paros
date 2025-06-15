@@ -14,16 +14,16 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/motorola/eqs
+DEVICE_PATH := device/motorola/paros
 
-# Inherit from motorola sm8475-common
-include device/motorola/sm8475-common/BoardConfigCommon.mk
+# Inherit from motorola sm6475-common
+include device/motorola/sm6475-common/BoardConfigCommon.mk
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := eqs
+TARGET_BOOTLOADER_BOARD_NAME := paros
 
 # HIDL
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/device_framework_matrix_eqs.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/device_framework_matrix_paros.xml
 ODM_MANIFEST_SKUS += dne
 ODM_MANIFEST_DNE_FILES := $(DEVICE_PATH)/manifest_dne.xml
 ODM_MANIFEST_SKUS += dn
@@ -33,11 +33,11 @@ ODM_MANIFEST_N_FILES := $(DEVICE_PATH)/manifest_n.xml $(COMMON_PATH)/manifest_ca
 
 # Kernel
 TARGET_KERNEL_CONFIG += \
-	vendor/ext_config/moto-waipio-eqs.config
+	vendor/ext_config/moto-parrot-paros.config
 
 # Partitions
-BOARD_MOT_DP_GROUP_SIZE := 11806965760 # ( BOARD_SUPER_PARTITION_SIZE - 4MB )
-BOARD_SUPER_PARTITION_SIZE := 11811160064
+BOARD_MOT_DP_GROUP_SIZE := 9122611200 # ( BOARD_SUPER_PARTITION_SIZE - 4MB )
+BOARD_SUPER_PARTITION_SIZE := 9126805504
 
 # Properties
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
@@ -48,7 +48,7 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 90
 
 # Security
-BOOT_SECURITY_PATCH := 2025-02-01
+BOOT_SECURITY_PATCH := 2025-03-01
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
 # Verified Boot
@@ -56,4 +56,4 @@ BOARD_AVB_ROLLBACK_INDEX := 22
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := 22
 
 # inherit from the proprietary version
-include vendor/motorola/eqs/BoardConfigVendor.mk
+include vendor/motorola/paros/BoardConfigVendor.mk

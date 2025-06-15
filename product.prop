@@ -1,5 +1,5 @@
 # Moto
-ro.vendor.product.display=motorola edge 30 ultra
+ro.vendor.product.display=moto g75 5g
 
 # Radio
-ro.vendor.radio.imei.sv=30
+ro.vendor.radio.imei.sv=12

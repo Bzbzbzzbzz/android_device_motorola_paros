@@ -26,23 +26,23 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := 400dpi
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
-BOARD_SHIPPING_API_LEVEL := 31
-PRODUCT_SHIPPING_API_LEVEL := 31
+BOARD_SHIPPING_API_LEVEL := 34
+PRODUCT_SHIPPING_API_LEVEL := 34
 
-# Inherit from motorola sm8475-common
-$(call inherit-product, device/motorola/sm8475-common/sm8475.mk)
+# Inherit from motorola sm6475-common
+$(call inherit-product, device/motorola/sm6475-common/sm6475.mk)
 
 # Overlay
 PRODUCT_PACKAGES += \
-    FrameworksResEqs \
-    LineageSystemUIEqs \
-    SystemUIResEqs
+    FrameworksResParos \
+    LineageSystemUIParos \
+    SystemUIResParos
 
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/sku_cape/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cape/audio_policy_configuration.xml \
-    $(LOCAL_PATH)/audio/sku_cape/mixer_paths_waipio_mtp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cape/mixer_paths_waipio_mtp.xml \
-    $(LOCAL_PATH)/audio/sku_cape/resourcemanager_waipio_mtp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cape/resourcemanager_waipio_mtp.xml \
+    $(LOCAL_PATH)/audio/sku_cape/mixer_paths_waipio_mtp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cape/mixer_paths_parrot_qrd.xml \
+    $(LOCAL_PATH)/audio/sku_cape/resourcemanager_parrot_qrd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cape/resourcemanager_waipio_mtp.xml \
     $(LOCAL_PATH)/audio/sku_cape_qssi/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_cape_qssi/audio_policy_configuration.xml \
     $(LOCAL_PATH)/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     $(LOCAL_PATH)/audio/audio_ext_spkr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_ext_spkr.conf \
@@ -91,4 +91,4 @@ $(call soong_config_set,qti_vibrator,effect_lib,libqtivibratoreffect.moto_sm8475
 $(call soong_config_set,qti_vibrator,use_effect_stream,true)
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/motorola/eqs/eqs-vendor.mk)
+$(call inherit-product, vendor/motorola/paros/paros-vendor.mk)

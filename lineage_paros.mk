@@ -20,20 +20,20 @@ TARGET_SUPPORTS_OMX_SERVICE := false
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from eqs device
-$(call inherit-product, device/motorola/eqs/device.mk)
+$(call inherit-product, device/motorola/paros/device.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_eqs
-PRODUCT_DEVICE := eqs
+PRODUCT_NAME := lineage_paros
+PRODUCT_DEVICE := paros
 PRODUCT_MANUFACTURER := motorola
 PRODUCT_BRAND := motorola
-PRODUCT_MODEL := motorola edge 30 ultra
+PRODUCT_MODEL := Moto G75 5G
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    DeviceProduct="eqs_ge" \
-    BuildDesc="eqs_ge-user 14 U1SQS34.52-21-1-15 b8994a-9634a release-keys" \
-    BuildFingerprint="motorola/eqs_ge/eqs:14/U1SQS34.52-21-1-15/b8994a-9634a:user/release-keys"
+    DeviceProduct="paros_g" \
+    BuildDesc="paros_g-user 15 V1UQ35H.103-18 56b832-a65abd release-keys" \
+    BuildFingerprint="motorola/paros_g/sorap:15/V1UQ35H.103-18/56b832-a65abd:user/release-keys"

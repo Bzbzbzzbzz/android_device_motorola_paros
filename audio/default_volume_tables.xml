@@ -20,9 +20,11 @@
     </reference>
     <reference name="SONIFICATION_CATEGORY_SPEAKER_VOLUME_CURVE">
     <!-- Speaker Sonification reference Volume Curve -->
-        <point>1,-3900</point>
-        <point>33,-2600</point>
-        <point>66,-1300</point>
+        <point>1,-4050</point>
+        <point>33,-2950</point>
+        <point>50,-2350</point>
+        <point>66,-1800</point>
+        <point>83,-1200</point>
         <point>100,0</point>
     </reference>
     <reference name="NOTIFICATION_CATEGORY_SPEAKER_VOLUME_CURVE">
