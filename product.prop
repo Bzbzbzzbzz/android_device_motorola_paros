@@ -2,4 +2,4 @@
 ro.vendor.product.display=moto g75 5g
 
 # Radio
-ro.vendor.radio.imei.sv=12
+ro.vendor.radio.imei.sv=16
