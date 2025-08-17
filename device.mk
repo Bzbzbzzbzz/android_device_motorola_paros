@@ -29,8 +29,8 @@ PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 BOARD_SHIPPING_API_LEVEL := 34
 PRODUCT_SHIPPING_API_LEVEL := 34
 
-# Inherit from motorola sm6475-common
-$(call inherit-product, device/motorola/sm6475-common/common.mk)
+# Inherit from motorola sm7435-common
+$(call inherit-product, device/motorola/sm7435-common/common.mk)
 
 # Overlay
 PRODUCT_PACKAGES += \
