@@ -20,17 +20,14 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'vendor/motorola/sm6475-common',
+    'device/motorola/sm7435-common',
+    'vendor/motorola/sm7435-common',
     'hardware/motorola',
     'hardware/qcom-caf/sm8450',
     'vendor/qcom/opensource/commonsys-intf/display',
 ]
 
 blob_fixups: blob_fixups_user_type = {
-    'vendor/lib64/libcamximageformatutils.so': blob_fixup().replace_needed(
-        'vendor.qti.hardware.display.config-V2-ndk_platform.so',
-        'vendor.qti.hardware.display.config-V2-ndk.so',
-    ),
 }
 
 extract_fns: extract_fns_user_type = {
@@ -43,11 +40,9 @@ module = ExtractUtilsModule(
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
-    add_generated_carriersettings=True,
-    add_firmware_proprietary_file=True,
     extract_fns=extract_fns,
 )
 
 if __name__ == '__main__':
-    utils = ExtractUtils.device_with_common(module, 'sm8475-common', module.vendor)
+    utils = ExtractUtils.device(module)
     utils.run()
