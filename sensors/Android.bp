@@ -7,7 +7,7 @@
 cc_library_shared {
     name: "sensors.paros",
     defaults: ["hidl_defaults"],
-    init_rc: ["sensors.moto_sm8475.rc"],
+    init_rc: ["sensors.paros.rc"],
     srcs: [
         "Sensor.cpp",
         "SensorsSubHal.cpp",
