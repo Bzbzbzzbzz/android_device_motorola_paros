@@ -3,3 +3,8 @@ ro.vendor.product.display=moto g75 5g
 
 # Radio
 ro.vendor.radio.imei.sv=16
+
+# eSIM
+masterclear.allow_retain_esim_profiles_after_fdr=true
+esim.enable_esim_system_ui_by_default=true
+ro.telephony.esim_slot_id=1
