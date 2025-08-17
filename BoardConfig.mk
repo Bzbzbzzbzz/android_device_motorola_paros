@@ -25,11 +25,11 @@ TARGET_BOOTLOADER_BOARD_NAME := paros
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/device_framework_matrix_paros.xml
 ODM_MANIFEST_SKUS += dne
-ODM_MANIFEST_DNE_FILES := $(DEVICE_PATH)/manifest_dne.xml
+ODM_MANIFEST_DNE_FILES := $(DEVICE_PATH)/configs/sku/manifest_dne.xml
 ODM_MANIFEST_SKUS += dn
-ODM_MANIFEST_DN_FILES := $(DEVICE_PATH)/manifest_dn.xml
+ODM_MANIFEST_DN_FILES := $(DEVICE_PATH)/configs/sku/manifest_dn.xml
 ODM_MANIFEST_SKUS += n
-ODM_MANIFEST_N_FILES := $(DEVICE_PATH)/manifest_n.xml $(COMMON_PATH)/manifest_cape_ss.xml
+ODM_MANIFEST_N_FILES := $(DEVICE_PATH)/configs/sku/manifest_n.xml $(COMMON_PATH)/manifest_parrot_ss.xml
 
 # Kernel
 TARGET_KERNEL_CONFIG += \
